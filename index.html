@@ -169,8 +169,9 @@
     <header id="header-nav" class="col-lg-2 position-fixed px-5 bg-white h-100">
       <div class="header-wrap d-flex flex-column justify-content-between h-100">
         <div class="navigation">
-          <div class="site-logo mt-5">
+          <div class="site-logo mt-5" style="display: flex; justify-content: center; align-items: center;">
             <a href="index.html">
+              <img src="images/banner.png" alt="banner" class="img-fluid" class="img-fluid"  style="width: 85%; height: 85%; border-radius: 50%; margin-left: 10px; padding-bottom: 10px;">
               <img src="images/main-logo.png" alt="logo" class="img-fluid">
             </a>
           </div>
@@ -666,7 +667,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination mt-5"></div>
+              <div class="swiper-pagination mt-5" style="bottom: var(--swiper-pagination-bottom, -7px) !important"></div>
             </div>
           </section>
 
@@ -677,10 +678,12 @@
                   <span class="text-muted text-uppercase">Personal Info</span>
                   <h2 class="display-1 txt-fx slide-up">Contact Me</h2>
                   <p>Got a question or want to collaborate? Feel free to reach out – I'm here to chat!</p>
+                  <h4 class="display-1 txt-fx slide-up" style="font-weight: 300; font-size: 40px;">jpfariapt@gmail.com</h4>
+
                 </div>
               </div>
               <div class="row d-flex g-5">
-                <div class="col-lg-7" data-aos="fade-up">
+                <!-- <div class="col-lg-7" data-aos="fade-up"> -->
                   <h3>Frequently Asked Questions</h3>
                   <div class="accordion" id="accordionExample2">
                     <div class="accordion-item">
@@ -734,29 +737,30 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                <!-- </div> -->
 
-                <div class="col-lg-5">
+                <!-- <div class="col-lg-5">
                   <div class="right-content" data-aos="fade-up">
-
                     <div class="element-header align-right">
                       <h3>Feel free to send me a message or any word of appreciation.</h3>
                     </div>
-
                     <div class="contact-form py-4">
-                      <form id="form" class="form-group">
-                        <div class="pb-2"><input type="text" name="name" placeholder="Your Full Name"
-                            class="form-control">
+                      <form id="form" class="form-group" method="POST" action="inc/sendEmail.php">
+                        <div class="pb-2">
+                          <input type="text" name="contactName" placeholder="Your Full Name" class="form-control">
                         </div>
-                        <div class="pb-2"><input type="email" name="address" placeholder="Your Email Address"
-                            class="form-control"></div>
-                        <div class="pb-2"><textarea placeholder="Your Message" rows="6" class="form-control"></textarea>
+                        <div class="pb-2">
+                          <input type="email" name="contactEmail" placeholder="Your Email Address" class="form-control">
+                        </div>
+                        <div class="pb-2">
+                          <textarea name="contactMessage" placeholder="Your Message" rows="6" class="form-control"></textarea>
                         </div>
                         <button type="submit" name="submit" class="btn btn-dark w-100 btn-rounded">Submit</button>
                       </form>
                     </div>
                   </div>
-                </div>
+                </div> -->
+
 
               </div>
             </div>
