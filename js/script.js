@@ -82,39 +82,32 @@
     });
   }
 
-  // init Isotope
-  var initIsotope = function() {
-    
-    $('.grid').each(function(){
+  // Copy email to clipboard
+  var initCopyEmail = function () {
+    var btn = document.getElementById('copy-email-btn');
+    if (!btn) return;
 
-      // $('.grid').imagesLoaded( function() {
-        // images have loaded
-        var $buttonGroup = $( '.button-group' );
-        var $checked = $buttonGroup.find('.is-checked');
-        var filterValue = $checked.attr('data-filter');
-  
-        var $grid = $('.grid').isotope({
-          itemSelector: '.portfolio-item',
-          // layoutMode: 'fitRows',
-          filter: filterValue
-        });
-    
-        // bind filter button click
-        $('.button-group').on( 'click', 'a', function(e) {
-          e.preventDefault();
-          filterValue = $( this ).attr('data-filter');
-          $grid.isotope({ filter: filterValue });
-        });
-    
-        // change is-checked class on buttons
-        $('.button-group').each( function( i, buttonGroup ) {
-          $buttonGroup.on( 'click', 'a', function() {
-            $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $( this ).addClass('is-checked');
-          });
-        });
-      // });
+    btn.addEventListener('click', function () {
+      var email = btn.getAttribute('data-email');
+      var label = document.getElementById('copy-email-text');
+      var reset = function () {
+        btn.classList.remove('is-copied');
+        if (label) label.textContent = email;
+      };
 
+      var showCopied = function () {
+        btn.classList.add('is-copied');
+        if (label) label.textContent = 'Copied!';
+        setTimeout(reset, 1800);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(showCopied).catch(function () {
+          window.location.href = 'mailto:' + email;
+        });
+      } else {
+        window.location.href = 'mailto:' + email;
+      }
     });
   }
 
@@ -131,6 +124,7 @@
     overlayMenu();
     initTextFx();
     initChocolat();
+    initCopyEmail();
 
     // mobile menu
     $('.menu-btn').click(function(e){
@@ -149,7 +143,6 @@
   // window load
   $(window).load(function () {
     $(".preloader").fadeOut("slow");
-    initIsotope();
   })
 
 

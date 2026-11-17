@@ -392,6 +392,132 @@ header {
   }
 }
 
+/*----- Avatar
+--------------------------------------------------------------*/
+.site-avatar {
+  width: 85%;
+  max-width: 160px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+/*----- Copy email button
+--------------------------------------------------------------*/
+.copy-email-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--bs-gray-300);
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.copy-email-btn svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-out, color 0.2s ease-out;
+}
+.copy-email-btn:hover svg,
+.copy-email-btn:focus-visible svg {
+  opacity: 1;
+  color: var(--bs-primary);
+}
+.copy-email-btn.is-copied {
+  color: var(--bs-primary);
+}
+
+/*----- Impact stats (hero)
+--------------------------------------------------------------*/
+.impact-stat {
+  border-left: 3px solid var(--bs-primary);
+  padding-left: 1rem;
+}
+.impact-stat .impact-number {
+  display: block;
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: var(--heading-color);
+}
+.impact-stat p {
+  font-size: 0.85rem;
+  color: var(--bs-gray);
+  margin-top: 0.25rem;
+}
+
+/*----- Skill tags
+--------------------------------------------------------------*/
+.skill-tags h3 {
+  margin-bottom: 1rem;
+}
+.skill-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--bs-gray-300);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: border-color 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
+}
+.skill-tag:hover {
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+  background-color: var(--bs-secondary);
+}
+
+/*----- Project cards
+--------------------------------------------------------------*/
+.project-card {
+  display: block;
+  height: 100%;
+  color: inherit;
+  border: 1px solid var(--bs-gray-200);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.25s ease-out, transform 0.25s ease-out;
+}
+.project-card:hover,
+.project-card:focus-visible {
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  color: inherit;
+}
+.project-card .image-holder img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.project-card .project-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+.project-card .project-stack {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.project-card .project-stack li {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  background: var(--bs-light);
+  color: var(--bs-gray-dark);
+}
+.project-card .project-impact {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--bs-gray-300);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--bs-primary-dark);
+}
+
 /*----- Skills
 --------------------------------------------------------------*/
 .skill-chart li {
