@@ -490,8 +490,14 @@ header {
 }
 .copy-email-btn svg {
   flex-shrink: 0;
+  margin-left: 12px;
   opacity: 0.6;
   transition: opacity 0.2s ease-out, color 0.2s ease-out;
+}
+#copy-email-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .copy-email-btn:hover svg,
 .copy-email-btn:focus-visible svg {
