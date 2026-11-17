@@ -2,6 +2,12 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.setAttribute('data-bs-theme', 'light');
+    })();
+  </script>
   <link rel="icon" href="images/banner.ico" type="image/x-icon">
   <title>João Faria — Software Engineer &amp; AI Engineer</title>
   <meta charset="utf-8">
@@ -110,6 +116,16 @@
       <symbol xmlns="http://www.w3.org/2000/svg" id="link" viewBox="0 0 24 24">
         <path fill="currentColor"
           d="M12 19a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0-4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm-5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm7-12h-1V2a1 1 0 0 0-2 0v1H8V2a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3Zm1 17a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9h16Zm0-11H4V6a1 1 0 0 1 1-1h1v1a1 1 0 0 0 2 0V5h8v1a1 1 0 0 0 2 0V5h1a1 1 0 0 1 1 1ZM7 15a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0 4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="sun" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </g>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="moon" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-left" viewBox="0 0 24 24">
         <path fill="currentColor"
@@ -242,6 +258,16 @@
                 </svg>
               </a>
             </li>
+            <li>
+              <button type="button" id="theme-toggle" class="theme-toggle text-dark" aria-label="Switch to light theme" aria-pressed="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">
+                  <use xlink:href="#sun"></use>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">
+                  <use xlink:href="#moon"></use>
+                </svg>
+              </button>
+            </li>
           </ul>
           <div class="py-4 border-top">
             <a href="assets/cv/Joao_Faria_CV_2026.pdf" class="btn btn-dark w-100" download>Download CV</a>
@@ -292,7 +318,7 @@
               <div class="col-6 col-lg-3">
                 <div class="impact-stat" data-aos="fade-up" data-aos-delay="200">
                   <span class="impact-number">5+</span>
-                  <p class="mb-0">Years delivering web, mobile &amp; AI software across healthcare, automotive &amp; automation</p>
+                  <p class="mb-0">Years delivering web, mobile &amp; AI software across healthcare, automotive and automation</p>
                 </div>
               </div>
               <div class="col-6 col-lg-3">
@@ -414,14 +440,9 @@
 
                 <span class="text-muted d-block mb-2">Working with João</span>
                 <div class="data-info" data-aos="fade-up">
-                  <h3 class="info-title">Engineering Lead</h3>
-                  <p>"João was one of two engineers trusted to lead our AI Pod — the pilot team driving agentic workflow adoption across the company. He designed the agents, skills and hooks covering our full delivery cycle and the increase in story throughput was immediate and measurable."</p>
+                  <p>Colleagues describe João as someone who takes ownership well beyond his own tickets — picking up projects end to end, from early planning through to production support, and staying closely involved with the people who actually use what he builds. On healthcare software, that meant working directly with clinicians to get the details right, not just the requirements on paper. He's known for building things that make the rest of the team faster, not just his own output, and for explaining technical decisions clearly to both engineers and non-technical stakeholders.</p>
                 </div>
-                <div class="data-info" data-aos="fade-up" data-aos-delay="100">
-                  <h3 class="info-title">Project Teammate</h3>
-                  <p>"What stands out with João is that he doesn't just ship features — he builds the tooling that makes the whole team faster. The governance UI he built for our AI workflows (usage stats, cost tracking) is something the rest of us now depend on daily."</p>
-                </div>
-                <p class="text-muted mt-2" style="font-size: 0.78rem;">Illustrative summaries of feedback received at work, written to protect colleagues' privacy — not verbatim quotes.</p>
+                <p class="text-muted mt-2" style="font-size: 0.78rem;">A general summary of the kind of feedback João has received at work, written to protect colleagues' privacy — not a verbatim quote.</p>
 
                 <span class="text-muted d-block mt-4 mb-2">From tutoring &amp; mentoring work</span>
                 <div class="data-info" data-aos="fade-up" data-aos-delay="100">

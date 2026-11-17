@@ -312,6 +312,34 @@ a {
   border-color: #333;
 }
 
+[data-bs-theme=dark] .btn-dark {
+  --bs-btn-color: #111;
+  --bs-btn-bg: var(--bs-light);
+  --bs-btn-border-color: var(--bs-light);
+  --bs-btn-hover-color: #111;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-active-color: #111;
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: #fff;
+  --bs-btn-disabled-color: #111;
+  --bs-btn-disabled-bg: var(--bs-light);
+  --bs-btn-disabled-border-color: var(--bs-light);
+}
+
+[data-bs-theme=dark] .btn-outline-dark {
+  --bs-btn-color: var(--bs-light);
+  --bs-btn-border-color: var(--bs-light);
+  --bs-btn-hover-color: #111;
+  --bs-btn-hover-bg: var(--bs-light);
+  --bs-btn-hover-border-color: var(--bs-light);
+  --bs-btn-active-color: #111;
+  --bs-btn-active-bg: var(--bs-light);
+  --bs-btn-active-border-color: var(--bs-light);
+  --bs-btn-disabled-color: var(--bs-gray);
+  --bs-btn-disabled-border-color: var(--bs-gray);
+}
+
 /* end of Bootstrap Color Theme */
 @media (min-width: 1200px) {
 
@@ -490,14 +518,17 @@ header {
 }
 .copy-email-btn svg {
   flex-shrink: 0;
-  margin-left: 12px;
+  margin-left: 6px;
   opacity: 0.6;
   transition: opacity 0.2s ease-out, color 0.2s ease-out;
 }
 #copy-email-text {
+  flex: 1 1 auto;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 0.8rem;
 }
 .copy-email-btn:hover svg,
 .copy-email-btn:focus-visible svg {
@@ -526,6 +557,27 @@ header {
   font-size: 0.85rem;
   color: var(--bs-gray);
   margin-top: 0.25rem;
+}
+
+/*----- Theme toggle
+--------------------------------------------------------------*/
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-toggle-icon-moon {
+  display: none;
+}
+[data-bs-theme="dark"] .theme-toggle-icon-sun {
+  display: none;
+}
+[data-bs-theme="dark"] .theme-toggle-icon-moon {
+  display: block;
 }
 
 /*----- Back to top
