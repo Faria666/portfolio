@@ -111,6 +111,27 @@
     });
   }
 
+  // Back to top button
+  var initBackToTop = function () {
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    var toggleVisibility = function () {
+      if (window.scrollY > window.innerHeight * 0.6) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   // init Chocolat light box
   var initChocolat = function() {
     Chocolat(document.querySelectorAll('.image-link'), {
@@ -125,6 +146,7 @@
     initTextFx();
     initChocolat();
     initCopyEmail();
+    initBackToTop();
 
     // mobile menu
     $('.menu-btn').click(function(e){

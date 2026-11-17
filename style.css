@@ -245,6 +245,73 @@ a {
   --bs-bg-opacity: 0.1;
 }
 
+[data-bs-theme=dark] header {
+  background-color: #191919;
+}
+
+[data-bs-theme=dark] #one-page-menu .nav-link {
+  color: var(--bs-light);
+  border-bottom-color: #333;
+}
+[data-bs-theme=dark] #one-page-menu .nav-link::before {
+  background: var(--bs-primary);
+}
+
+[data-bs-theme=dark] .text-dark {
+  color: var(--bs-light) !important;
+}
+
+[data-bs-theme=dark] .bg-text:after {
+  color: #1c1c1c;
+}
+
+[data-bs-theme=dark] .project-card {
+  background: #1a1a1a;
+  border-color: #2b2b2b;
+}
+[data-bs-theme=dark] .project-card .project-stack li {
+  background: #262626;
+  color: var(--bs-gray);
+}
+[data-bs-theme=dark] .project-card .project-impact {
+  border-top-color: #333;
+}
+[data-bs-theme=dark] .project-private-badge {
+  background: #262626;
+  color: var(--bs-gray);
+}
+
+[data-bs-theme=dark] .skill-tag {
+  border-color: #333;
+  color: var(--bs-light);
+}
+[data-bs-theme=dark] .skill-tag:hover {
+  border-color: var(--bs-primary);
+  background-color: rgba(255, 83, 74, 0.12);
+  color: var(--bs-primary);
+}
+
+[data-bs-theme=dark] .impact-stat p {
+  color: var(--bs-gray);
+}
+
+[data-bs-theme=dark] .copy-email-btn {
+  border-bottom-color: #333;
+}
+
+[data-bs-theme=dark] .accordion-button {
+  border-bottom-color: #333;
+}
+
+[data-bs-theme=dark] .table {
+  --bs-table-color: var(--bs-light);
+  --bs-table-border-color: #333;
+}
+
+[data-bs-theme=dark] .skill-chart li .chart-border {
+  border-color: #333;
+}
+
 /* end of Bootstrap Color Theme */
 @media (min-width: 1200px) {
 
@@ -455,6 +522,45 @@ header {
   margin-top: 0.25rem;
 }
 
+/*----- Back to top
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bs-gray-300);
+  border-radius: 50%;
+  background: var(--bs-body-bg);
+  color: var(--heading-color);
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+@media (max-width: 991px) {
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
 /*----- Skill tags
 --------------------------------------------------------------*/
 .skill-tags h3 {
@@ -525,6 +631,27 @@ header {
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--bs-primary-dark);
+}
+.project-card-static {
+  cursor: default;
+}
+.project-card-static:hover,
+.project-card-static:focus-visible {
+  box-shadow: none;
+  transform: none;
+}
+.project-private-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  background: var(--bs-light);
+  color: var(--bs-gray-dark);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
 }
 
 /*----- Skills
