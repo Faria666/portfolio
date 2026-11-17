@@ -213,6 +213,15 @@
 
   <a class="menu-btn"><span></span></a>
 
+  <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme" aria-pressed="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">
+      <use xlink:href="#sun"></use>
+    </svg>
+    <svg width="20" height="20" viewBox="0 0 24 24" class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">
+      <use xlink:href="#moon"></use>
+    </svg>
+  </button>
+
   <div class="container-fluid overflow-hidden">
 
     <header id="header-nav" class="col-lg-2 position-fixed px-5 h-100">
@@ -243,30 +252,20 @@
               </svg>
             </button>
           </div>
-          <ul class="list-unstyled d-flex justify-content-start flex-wrap gap-3">
-            <li>
+          <ul class="list-unstyled d-flex align-items-center justify-content-start flex-wrap gap-3">
+            <li class="d-flex">
               <a href="https://github.com/Faria666" class="text-dark" target="_blank" rel="noopener" aria-label="GitHub">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <use xlink:href="#github"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="d-flex">
               <a href="https://www.linkedin.com/in/joaopgafaria/" class="text-dark" target="_blank" rel="noopener" aria-label="LinkedIn">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <use xlink:href="#linkedin"></use>
                 </svg>
               </a>
-            </li>
-            <li>
-              <button type="button" id="theme-toggle" class="theme-toggle text-dark" aria-label="Switch to light theme" aria-pressed="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">
-                  <use xlink:href="#sun"></use>
-                </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24" class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">
-                  <use xlink:href="#moon"></use>
-                </svg>
-              </button>
             </li>
           </ul>
           <div class="py-4 border-top">
