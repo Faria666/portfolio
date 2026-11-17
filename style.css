@@ -406,11 +406,20 @@ header {
 .copy-email-btn {
   width: 100%;
   background: none;
-  border: none;
+  border: 0;
   border-bottom: 1px solid var(--bs-gray-300);
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
   font: inherit;
   color: inherit;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.copy-email-btn:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
 }
 .copy-email-btn svg {
   flex-shrink: 0;
